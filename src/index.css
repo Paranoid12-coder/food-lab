@@ -664,17 +664,19 @@ p  { margin: 0 0 1em; color: var(--slate); font-size: 0.98rem; }
 
 
 /* Иконка на тёмной матчакарточке белая */
+/* Иконка на тёмной матча-карточке: белый квадрат + тёмная иконка */
 .card-matcha .feature-icon {
-  background: rgba(255, 255, 255, 0.22) !important;
-  color: #ffffff !important;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+  background: #ffffff !important;
+  color: var(--matcha) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 .card-matcha .feature-icon svg {
-  color: #ffffff;
-  stroke: #ffffff;
-  stroke-width: 1.75;
+  color: var(--matcha);
+  stroke: var(--matcha);
+  stroke-width: 2;
+  width: 22px;
+  height: 22px;
 }
-
 
 
 /* Карточка-плакат: чистые скруглённые углы без артефактов */
