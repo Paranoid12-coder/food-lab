@@ -66,14 +66,14 @@ p  { margin: 0 0 1em; color: var(--slate); font-size: 0.98rem; }
 
 .num { font-variant-numeric: tabular-nums; }
 
-/ Обёртка /
+/* Обертка */
 .container {
   max-width: 1180px;
   margin: 0 auto;
   padding: 2rem 1.5rem 5rem;
 }
 
-/ Навба/
+/* Навба */
 .navbar {
   position: sticky;
   top: 0;
