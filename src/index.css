@@ -73,7 +73,7 @@ p  { margin: 0 0 1em; color: var(--slate); font-size: 0.98rem; }
   padding: 2rem 1.5rem 5rem;
 }
 
-/* Навба */
+/* Навбар */
 .navbar {
   position: sticky;
   top: 0;
@@ -128,7 +128,7 @@ p  { margin: 0 0 1em; color: var(--slate); font-size: 0.98rem; }
 .bento-tall   { grid-column: span 4; }
 .bento-feature { grid-column: span 4; }
 
-/* ===== Bento Card ===/
+/* ===== Bento Card ===== */
 .card {
   background: var(--white);
   border: 1px solid var(--border);
@@ -226,8 +226,8 @@ p  { margin: 0 0 1em; color: var(--slate); font-size: 0.98rem; }
   display: grid; place-items: center;
   color: var(--matcha);
   margin-bottom: 1rem;
+  box-shadow: inset 0 0 0 1px rgba(58, 90, 64, 0.06);
 }
-.card-matcha .feature-icon { background: rgba(255,255,255,0.15); color: #fff; }
 
 /* ===== Каталог ===== */
 .section-head {
@@ -375,6 +375,7 @@ p  { margin: 0 0 1em; color: var(--slate); font-size: 0.98rem; }
   .card { padding: 1.25rem; }
   h1 { font-size: 2.2rem; }
 }
+
 /* ===== Градиентные «фото» вместо Unsplash ===== */
 .photo-organic {
   background:
@@ -411,6 +412,7 @@ p  { margin: 0 0 1em; color: var(--slate); font-size: 0.98rem; }
 .product-photo[data-cat="Белки"]   { background: linear-gradient(135deg, #cdd7c4, #5b7455); }
 .product-photo[data-cat="Зерновые"]{ background: linear-gradient(135deg, #ece3d0, #b8a687); }
 .product-photo[data-cat="Молочное"]{ background: linear-gradient(135deg, #f3efe6, #cfc7b6); }
+
 /* ===== Каталог: контролы ===== */
 .catalog-controls {
   display: flex;
@@ -662,30 +664,12 @@ p  { margin: 0 0 1em; color: var(--slate); font-size: 0.98rem; }
   .modal-head { flex-direction: column; align-items: flex-start; }
 }
 
-
-/* Иконка на тёмной матчакарточке белая */
-/* Иконка на тёмной матча-карточке: белый квадрат + тёмная иконка */
-.card-matcha .feature-icon {
-  background: #ffffff !important;
-  color: var(--matcha) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-.card-matcha .feature-icon svg {
-  color: var(--matcha);
-  stroke: var(--matcha);
-  stroke-width: 2;
-  width: 22px;
-  height: 22px;
-}
-
-
 /* Карточка-плакат: чистые скруглённые углы без артефактов */
 .card-photo.photo-organic {
   border-radius: var(--radius-card);
   overflow: hidden;
   isolation: isolate;
   position: relative;
-  /* убираем декоративный круг, который лез в углы */
 }
 .card-photo.photo-organic::after {
   content: none;
