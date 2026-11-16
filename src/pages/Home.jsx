@@ -1,9 +1,6 @@
 import { Link } from 'react-router-dom'
 import { IconBook, IconCalendar, IconChart, IconArrowRight, IconSparkles } from '../components/icons.jsx'
 
-const HERO_IMAGE =
-  'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80'
-
 export default function Home() {
   return (
     <div className="bento">
@@ -32,9 +29,8 @@ export default function Home() {
         </div>
       </article>
 
-      {/* Hero photo */}
-      <article className="card card-photo bento-photo reveal">
-        <img src={HERO_IMAGE} alt="Свежий салат с авокадо и овощами" loading="lazy" />
+      {/* Hero «фото» — градиент, без сети */}
+      <article className="card card-photo bento-photo photo-organic reveal">
         <div className="photo-overlay">
           <h3>Свежесть в каждой детали</h3>
           <p>60+ продуктов с полной нутритивной ценностью</p>

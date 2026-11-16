@@ -351,9 +351,8 @@ p  { margin: 0 0 1em; color: var(--slate); font-size: 0.98rem; }
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-.reveal { opacity: 0; }
-.reveal.in-view {
-  animation: fadeUp 0.7s var(--ease) forwards;
+.reveal {
+  animation: fadeUp 0.7s var(--ease) both;
 }
 .bento > *:nth-child(1) { animation-delay: 0s; }
 .bento > *:nth-child(2) { animation-delay: 0.08s; }
@@ -376,3 +375,39 @@ p  { margin: 0 0 1em; color: var(--slate); font-size: 0.98rem; }
   .card { padding: 1.25rem; }
   h1 { font-size: 2.2rem; }
 }
+/* ===== Градиентные «фото» вместо Unsplash ===== */
+.photo-organic {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255,255,255,0.35), transparent 55%),
+    linear-gradient(135deg, #d9e3ce 0%, #a3b18a 50%, #8b9d72 100%);
+}
+.photo-organic::after {
+  content: '';
+  position: absolute;
+  right: -40px; bottom: -40px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(255,255,255,0.25), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.product-photo {
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.product-photo .product-initial {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 4.5rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  text-shadow: 0 2px 20px rgba(20,23,21,0.08);
+}
+.product-photo[data-cat="Овощи"]   { background: linear-gradient(135deg, #d4e0c7, #7a9679); }
+.product-photo[data-cat="Фрукты"]  { background: linear-gradient(135deg, #f6d9c8, #d97757); }
+.product-photo[data-cat="Белки"]   { background: linear-gradient(135deg, #cdd7c4, #5b7455); }
+.product-photo[data-cat="Зерновые"]{ background: linear-gradient(135deg, #ece3d0, #b8a687); }
+.product-photo[data-cat="Молочное"]{ background: linear-gradient(135deg, #f3efe6, #cfc7b6); }

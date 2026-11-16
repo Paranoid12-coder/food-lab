@@ -31,22 +31,13 @@ const SAMPLE_PRODUCTS = [
     img: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&q=80',
     category: 'Зерновые',
   },
-  {
-    id: 5,
-    name: 'Черника',
-    kcal: 57,
-    p: 1, f: 0, c: 14,
-    img: 'https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=600&q=80',
-    category: 'Фрукты',
-  },
-  {
-    id: 6,
-    name: 'Шпинат',
-    kcal: 23,
-    p: 3, f: 0, c: 4,
-    img: 'https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=600&q=80',
-    category: 'Овощи',
-  },
+const SAMPLE_PRODUCTS = [
+  { id: 1, name: 'Авокадо',         kcal: 160, p: 2,  f: 15, c: 9,  category: 'Фрукты' },
+  { id: 2, name: 'Лосось',          kcal: 208, p: 20, f: 13, c: 0,  category: 'Белки' },
+  { id: 3, name: 'Греческий йогурт', kcal: 59,  p: 10, f: 0,  c: 4,  category: 'Молочное' },
+  { id: 4, name: 'Киноа',           kcal: 120, p: 4,  f: 2,  c: 21, category: 'Зерновые' },
+  { id: 5, name: 'Черника',         kcal: 57,  p: 1,  f: 0,  c: 14, category: 'Фрукты' },
+  { id: 6, name: 'Шпинат',          kcal: 23,  p: 3,  f: 0,  c: 4,  category: 'Овощи' },
 ]
 
 const CATEGORIES = ['Все', 'Овощи', 'Фрукты', 'Белки', 'Зерновые', 'Молочное']
@@ -72,8 +63,8 @@ export default function Catalog() {
       <div className="catalog-grid">
         {SAMPLE_PRODUCTS.map((prod) => (
           <article key={prod.id} className="product-card">
-            <div className="product-photo">
-              <img src={prod.img} alt={prod.name} loading="lazy" />
+            <div className="product-photo" data-cat={prod.category}>
+              <span className="product-initial">{prod.name[0]}</span>
             </div>
             <div className="product-body">
               <h3>{prod.name}</h3>
